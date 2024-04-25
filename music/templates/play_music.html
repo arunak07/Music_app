@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Cards</title>
+    <link rel="stylesheet" href="{% static 'css/play_music.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% for path in paths %}
+            <div class="card">
+                <img src="{% static path.image_path %}" alt="{{ path.music_name }}" width="800" height="900">
+                <h3>
+                    <audio id="{{ path.id }}" controls controlsList="playpause">
+                        <source  src="{% static path.music_path %}" type="audio/mpeg">
+                    </audio>
+                    {{ path.music_name }}
+                </h3>
+                <button onclick="play( {{ path.id }} )">Play</button>
+                <button onclick="pause( {{ path.id }} )">Pause</button>
+            </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'js/play_music.js' %}"></script>
+</body>
+</html>

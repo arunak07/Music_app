@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Website</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Music Player</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#">Admin</a>
+        <a href="user/login">Login</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <div>
+                <h2>Welcome to our Music Player Website</h2>
+                <p>This is a place where you can enjoy your favorite music tracks.</p>
+                <img src="music1.jpg" alt="Music Player Image 1">
+            </div>
+            <div>
+                <h2>Discover New Music</h2>
+                <p>Explore our vast collection of music and discover new tracks.</p>
+                <img src="music2.jpg" alt="Music Player Image 2">
+            </div>
+            <div>
+                <h2>Create Your Playlist</h2>
+                <p>Build your own playlist with your favorite songs.</p>
+                <img src="music3.jpg" alt="Music Player Image 3">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Contact: ARUN@gmail.com | About: Our Music Player Website</p>
+    </footer>
+</body>
+</html>
